@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+ 
+{% block title %}Profile{% endblock %}
+ 
+{% block content %}
+<h1>Portfolio</h1>
+<table class="table table-striped"> 
+    <thead> 
+        <tr> 
+            <th>ID</th>
+            <th>Username</th> 
+            <th>Name</th>
+            <th>Ticker</th> 
+        </tr> 
+    </thead> 
+    <tbody> 
+        {% for row in data %}  
+            <tr> 
+                <td>{{ row['ID'] }}</td> 
+                <td>{{ row['Username'] }}</td>
+                <td>{{ row['Name'] }}</td>
+                <td>{{ row['Ticker'] }}</td> 
+            </tr> 
+        {% endfor %} 
+    </tbody> 
+</table> 
+{% endblock %}
